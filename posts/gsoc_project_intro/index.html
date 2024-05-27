@@ -514,20 +514,18 @@
 <p>Besides my internal motivation, I have to say that I am also motivated by my mentors for this project – <a class="reference external" href="https://github.com/AdamRJensen">Adam Jensen</a> and <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a>. These guys’ are integral members of the pvlib community and their commitment to the ongoing growth and development of pvlib is inspiring. After introducing me to the GSoC program, they both supported my application and I am fortunate to have them as my guides for this work.</p>
 <p><img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
 </section>
-</section>
 <section id="why-care-about-spectral-irradiance">
-<h1>Why care about spectral irradiance?<a class="headerlink" href="#why-care-about-spectral-irradiance" title="Permalink to this heading">#</a></h1>
-</section>
+<h2>Why care about spectral irradiance?<a class="headerlink" href="#why-care-about-spectral-irradiance" title="Permalink to this heading">#</a></h2>
 <section id="not-all-light-is-created-equal">
-<h1>Not all light is created equal<a class="headerlink" href="#not-all-light-is-created-equal" title="Permalink to this heading">#</a></h1>
+<h3>Not all light is created equal<a class="headerlink" href="#not-all-light-is-created-equal" title="Permalink to this heading">#</a></h3>
 <p>Aside from what motivates me to work on this project, what motivates the project itself? Sunny days =&gt; more solar power, right? What does the colour of light (spectral irradiance) have to do with anything? Well, not exactly. Not all light is created equal — sometimes you have more infrared, sometimes more ultraviolet. Much like your skin when you go out on a sunny day, sometimes you get warm and sometimes you get sun burnt, solar panels also respond differently to different types of light (different spectra) because they have what is known as a “spectral response”. Accounting for this effect when modelling PV performance is critical and failing to do so can lead to <a class="reference external" href="https://doi.org/10.1016/j.solener.2019.12.042">errors of up to 15%</a> for annualised performance predictions.</p>
 </section>
 <section id="pvlib-current-capabilities">
-<h1>pvlib: current capabilities<a class="headerlink" href="#pvlib-current-capabilities" title="Permalink to this heading">#</a></h1>
+<h3>pvlib: current capabilities<a class="headerlink" href="#pvlib-current-capabilities" title="Permalink to this heading">#</a></h3>
 <p>Pvlib currently contains three spectral correction functions (SCFs) to model PV performance variations due to changes in the spectrum. However, the scope of models is limited in terms of the diversity of dependent variables and the documentation lacks examples to guide users on the implementation of these functions in the overall modelling pipeline. In terms of the diversity of dependent variables, there are two primary limitations. First, none of the existing models explicitly consider the effects of cloud cover. Second, all models are based on proxy variables. Proxy variables are indirect characterisation indices of the solar spectrum, suchas air mass, precipitable water content, and so on. These are atmospheric factors that influence the spectrum and whose influence is considered sufficiently dominant such that their value may be used as an indicator for the prevailing spectral irradiance conditions. As a simple analogy, when it is hot outside, one would expect ice cream sales to increase. Therefore, temperature could be used as a proxy for ice cream sales. The advantage of these varaibles is of course that they can easily be calcualted using easily acquirable parameters such as time of day, location, ambient air temperature, humidity, and so on. The limitation is that they limit the amount of information on the spectrum contained with the correction function. More information on different models and characterisation indices can be found <a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129461">in this review paper</a>.</p>
 </section>
 <section id="pvlib-what-s-next">
-<h1>pvlib: what’s next?<a class="headerlink" href="#pvlib-what-s-next" title="Permalink to this heading">#</a></h1>
+<h3>pvlib: what’s next?<a class="headerlink" href="#pvlib-what-s-next" title="Permalink to this heading">#</a></h3>
 <p>Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/1950">An issue</a> has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.</p>
 <table class="table">
 <thead>
@@ -560,6 +558,8 @@
 </tbody>
 </table>
 <p>The implementation of these models in pvlib will be supported by a new example demonstrating their application and use in the overall PV performance modelling pipeline. This will be the first example in pvlib python for a spectral correction function.</p>
+</section>
+</section>
 <section id="closing-remark">
 <h2>Closing remark<a class="headerlink" href="#closing-remark" title="Permalink to this heading">#</a></h2>
 <p>Stay tuned into this blog for more updates. You can also follow <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2065">this github issue</a> and <a class="reference external" href="https://www.linkedin.com/in/rajiv-daxini-ba354a237/">my LinkedIn page</a> for updates on the project. Please feel free to share your comments and thoughts on the open issues and public posts so that we may develop this project together. All and any feedback is always more than welcome!</p>
@@ -618,12 +618,12 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-blog-post">A first blog post</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-abstract">Project abstract</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-motivates-me">What motivates me?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-care-about-spectral-irradiance">Why care about spectral irradiance?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-all-light-is-created-equal">Not all light is created equal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-current-capabilities">pvlib: current capabilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-what-s-next">pvlib: what’s next?</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-care-about-spectral-irradiance">Why care about spectral irradiance?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#not-all-light-is-created-equal">Not all light is created equal</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-current-capabilities">pvlib: current capabilities</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-what-s-next">pvlib: what’s next?</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-remark">Closing remark</a></li>
 </ul>
 </li>

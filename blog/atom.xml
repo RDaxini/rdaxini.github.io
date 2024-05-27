@@ -2,10 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2024-05-27T10:36:22.505199+00:00</updated>
+  <updated>2024-05-27T10:37:36.142742+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>http://predictablysunny.com/posts/gsoc_project_intro/</id>
+    <title>Enhancing solar energy modelling: implementing new spectral corrections in pvlib python</title>
+    <updated>2024-05-27T00:00:00+00:00</updated>
+    <author>
+      <name>Rajiv Daxini</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This first blog post introduces the motivation and plan for my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract &lt;a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqTv"&gt;can be found here&lt;/a&gt; and is reinstated below.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="http://predictablysunny.com/posts/gsoc_project_intro/"/>
+    <summary>This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract can be found here and is reinstated below.</summary>
+    <category term="gsoc" label="gsoc"/>
+    <category term="introduction" label="introduction"/>
+    <category term="openscience" label="open science"/>
+    <category term="pvlib" label="pvlib"/>
+    <category term="solar" label="solar"/>
+    <published>2024-05-27T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://predictablysunny.com/posts/solar_systems_denmark/</id>
     <title>Solar Energy Systems in Denmark</title>
@@ -211,25 +230,5 @@
     <category term="gsoc" label="gsoc"/>
     <category term="openscience" label="open science"/>
     <published>2021-07-19T00:00:00+00:00</published>
-  </entry>
-  <entry>
-    <id>http://predictablysunny.com/posts/gsoc_project_intro/</id>
-    <title>pvlib - a one-stop source for solar resource data</title>
-    <updated>2021-06-10T00:00:00+00:00</updated>
-    <author>
-      <name>Adam R. Jensen</name>
-    </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This title at least represents the aim of my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project that I will be completing during the next 10 weeks. In short, I’ll be extending &lt;a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/"&gt;pvlib python’s&lt;/a&gt; current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
-&lt;img alt="gsoc and pvlib logo" src="http://predictablysunny.com/_images/gsoc_at_pvlib.png" /&gt;&lt;/p&gt;
-&lt;/p&gt;
-</content>
-    <link href="http://predictablysunny.com/posts/gsoc_project_intro/"/>
-    <summary>This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
-gsoc and pvlib logo</summary>
-    <category term="gsoc" label="gsoc"/>
-    <category term="openscience" label="open science"/>
-    <category term="pvlib" label="pvlib"/>
-    <category term="solar" label="solar"/>
-    <published>2021-06-10T00:00:00+00:00</published>
   </entry>
 </feed>

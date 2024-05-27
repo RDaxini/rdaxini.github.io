@@ -418,6 +418,12 @@
   
   
   <li>
+    <a href="../gsoc_project_intro/">
+      27 May - Enhancing solar energy modelling: implementing new spectral corrections in pvlib python
+    </a>
+  </li>
+  
+  <li>
     <a href="../danish_district_heating_areas/">
       14 April - District heating areas in Denmark
     </a>
@@ -438,12 +444,6 @@
   <li>
     <a href="../twoaxistracking_animation/">
       09 November - Animation of two-axis tracker shading
-    </a>
-  </li>
-  
-  <li>
-    <a href="../dmi_data/">
-      22 February - DMI API Tutorial
     </a>
   </li>
   
@@ -584,7 +584,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_f83a95f65b42831338ade37e1b0b2717 {
+                #map_809d605297ed01eff8df62345d7b6c07 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -600,14 +600,14 @@
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_f83a95f65b42831338ade37e1b0b2717&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_809d605297ed01eff8df62345d7b6c07&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_f83a95f65b42831338ade37e1b0b2717 = L.map(
-                &quot;map_f83a95f65b42831338ade37e1b0b2717&quot;,
+            var map_809d605297ed01eff8df62345d7b6c07 = L.map(
+                &quot;map_809d605297ed01eff8df62345d7b6c07&quot;,
                 {
                     center: [55.7, 9.2],
                     crs: L.CRS.EPSG3857,
@@ -621,74 +621,74 @@
 
         
     
-            var tile_layer_4fa8c3f6f53c50d91a3804912f789e64 = L.tileLayer(
+            var tile_layer_65342683dd1006a53022368b0e309107 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_4fa8c3f6f53c50d91a3804912f789e64.addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            tile_layer_65342683dd1006a53022368b0e309107.addTo(map_809d605297ed01eff8df62345d7b6c07);
         
     
-            var macro_element_c683df1de1568a26ec06b70f6f61c937 = L.tileLayer.wms(
+            var macro_element_7682b2ae342ecbc959971dbcf459f256 = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solceller&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_c683df1de1568a26ec06b70f6f61c937.addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            macro_element_7682b2ae342ecbc959971dbcf459f256.addTo(map_809d605297ed01eff8df62345d7b6c07);
         
     
-            var macro_element_05bc80bc64c673b82a868a4fca1fecc4 = L.tileLayer.wms(
+            var macro_element_1bb1ad56011316c9271023c6a309db24 = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solfanger&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_05bc80bc64c673b82a868a4fca1fecc4.addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            macro_element_1bb1ad56011316c9271023c6a309db24.addTo(map_809d605297ed01eff8df62345d7b6c07);
         
     
-            var tile_layer_ac3ed8a62b1ba962d0aba82c656f0b82 = L.tileLayer(
+            var tile_layer_a8cbfaf04d59314db481c976b04c0c65 = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {&quot;attribution&quot;: &quot;Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_ac3ed8a62b1ba962d0aba82c656f0b82.addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            tile_layer_a8cbfaf04d59314db481c976b04c0c65.addTo(map_809d605297ed01eff8df62345d7b6c07);
         
     
-            var layer_control_75b52f89300af9888c8a5958f8ec4899_layers = {
+            var layer_control_060fe40a006cb1b7559bc8a5b8bbf3cc_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_4fa8c3f6f53c50d91a3804912f789e64,
-                    &quot;World imagery&quot; : tile_layer_ac3ed8a62b1ba962d0aba82c656f0b82,
+                    &quot;openstreetmap&quot; : tile_layer_65342683dd1006a53022368b0e309107,
+                    &quot;World imagery&quot; : tile_layer_a8cbfaf04d59314db481c976b04c0c65,
                 },
                 overlays :  {
-                    &quot;PV plants&quot; : macro_element_c683df1de1568a26ec06b70f6f61c937,
-                    &quot;Solar district heating plants&quot; : macro_element_05bc80bc64c673b82a868a4fca1fecc4,
+                    &quot;PV plants&quot; : macro_element_7682b2ae342ecbc959971dbcf459f256,
+                    &quot;Solar district heating plants&quot; : macro_element_1bb1ad56011316c9271023c6a309db24,
                 },
             };
-            let layer_control_75b52f89300af9888c8a5958f8ec4899 = L.control.layers(
-                layer_control_75b52f89300af9888c8a5958f8ec4899_layers.base_layers,
-                layer_control_75b52f89300af9888c8a5958f8ec4899_layers.overlays,
+            let layer_control_060fe40a006cb1b7559bc8a5b8bbf3cc = L.control.layers(
+                layer_control_060fe40a006cb1b7559bc8a5b8bbf3cc_layers.base_layers,
+                layer_control_060fe40a006cb1b7559bc8a5b8bbf3cc_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            ).addTo(map_809d605297ed01eff8df62345d7b6c07);
 
         
     
             L.control.fullscreen(
                 {&quot;forceSeparateButton&quot;: false, &quot;position&quot;: &quot;topleft&quot;, &quot;title&quot;: &quot;Full Screen&quot;, &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;}
-            ).addTo(map_f83a95f65b42831338ade37e1b0b2717);
+            ).addTo(map_809d605297ed01eff8df62345d7b6c07);
         
     
-                var lat_lng_popup_22e3f2b81ebaf2f39b3e022841f35547 = L.popup();
+                var lat_lng_popup_cb9199b41975aceeb13c27b2fdbe41a5 = L.popup();
                 function latLngPop(e) {
-                    lat_lng_popup_22e3f2b81ebaf2f39b3e022841f35547
+                    lat_lng_popup_cb9199b41975aceeb13c27b2fdbe41a5
                         .setLatLng(e.latlng)
                         .setContent(&quot;Latitude: &quot; + e.latlng.lat.toFixed(4) +
                                     &quot;&lt;br&gt;Longitude: &quot; + e.latlng.lng.toFixed(4))
-                        .openOn(map_f83a95f65b42831338ade37e1b0b2717);
+                        .openOn(map_809d605297ed01eff8df62345d7b6c07);
                     }
-                map_f83a95f65b42831338ade37e1b0b2717.on(&#x27;click&#x27;, latLngPop);
+                map_809d605297ed01eff8df62345d7b6c07.on(&#x27;click&#x27;, latLngPop);
             
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
@@ -714,6 +714,14 @@
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
+    
+    
+    <a href="../gsoc_project_intro/">
+      <span>Enhancing solar energy modelling: implementing new spectral corrections in pvlib python</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
+    </a>
     
   </span>
 </div>

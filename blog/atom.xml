@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-05-27T14:09:40.931658+00:00</updated>
+  <updated>2024-05-27T14:17:55.112785+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -23,6 +23,7 @@
     <category term="openscience" label="open science"/>
     <category term="pvlib" label="pvlib"/>
     <category term="solar" label="solar"/>
+    <category term="spectral" label="spectral"/>
     <published>2024-05-27T00:00:00+00:00</published>
   </entry>
 </feed>

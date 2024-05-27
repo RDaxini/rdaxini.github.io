@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-05-27T13:02:22.634588+00:00</updated>
+  <updated>2024-05-27T14:09:40.931658+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Rajiv Daxini</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This first blog post introduces the motivation and plan for my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract &lt;a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqTv"&gt;can be found here&lt;/a&gt; and is reinstated below.&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This first blog post introduces the motivation and plan for my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract &lt;a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT"&gt;can be found here&lt;/a&gt; and is reinstated below.&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="http://rdaxini.github.io/.com/posts/gsoc_project_intro/"/>

@@ -5,7 +5,7 @@
 :tags: pvlib, solar, open science, gsoc, introduction
 ```
 
-This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqTv) and is reinstated below.
+This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT) and is reinstated below.
 
 ## Project abstract
 

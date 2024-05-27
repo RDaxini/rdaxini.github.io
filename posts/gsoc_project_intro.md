@@ -2,7 +2,7 @@
 # A first blog post
 ```{post} 2024-05-27
 :author: Rajiv Daxini
-:tags: pvlib, solar, open science, gsoc, introduction
+:tags: pvlib, solar, open science, gsoc, introduction, spectral
 ```
 
 This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT) and is reinstated below.
@@ -26,12 +26,12 @@ Pvlib currently contains three spectral correction functions (SCFs) to model PV 
 # pvlib: what's next?
 Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. [An issue](https://github.com/pvlib/pvlib-python/issues/1950) has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.
 
-| Model                                                | Reference                                                                      |
+| **Model**                                                | **Reference**                                                              |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Air mass                                             | [King et al. 2002](https://doi.org/10.1109/PVSC.1997.654283)                   |
 | Air mass, aerosol optical depth, precipitable water  | [Caballero et al. 2018](https://doi.org/10.1109/JPHOTOV.2017.2787019)          |
 | Air mass, precipitable water                         | [Lee and Panchula 2016](https://doi.org/10.1109/PVSC.2016.7749836)             |
-| -------------Proposed models below------------------ | --------------------------Proposed models below------------------------------- |
+|   --Proposed models below--                          |   --Proposed models below--                                                    |
 | Air mass, clearness index                            | [Pelland et al. 2020 ](https://doi.org/10.1109/PVSC45281.2020.9300932)         |
 | Air mass, clearness index                            | [Huld et al. 2009](http://dx.doi.org/10.4229/24thEUPVSEC2009-4AV.3.27)         |
 | Average photon energy + spectral band depth          | [Daxini et al. 2023](https://doi.org/10.1016/j.energy.2023.129046)             |

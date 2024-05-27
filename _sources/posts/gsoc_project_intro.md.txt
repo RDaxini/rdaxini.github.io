@@ -1,11 +1,9 @@
-# Enhancing solar energy modelling: implementing new spectral corrections in pvlib python
-# A first blog post
+# Spectral corrections in pvlib python: A GSoC project
 ```{post} 2024-05-27
 :author: Rajiv Daxini
 :tags: pvlib, solar, open science, gsoc, introduction, spectral
 ```
-
-This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT) and is reinstated below.
+This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) (GSoC) project, which is entitled "Enhancing solar energy modelling: implementing new spectral corrections in pvlib python." The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT) and is reinstated below.
 
 ## Project abstract
 

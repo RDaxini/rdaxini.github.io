@@ -2,22 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-05-27T14:20:11.270049+00:00</updated>
+  <updated>2024-05-27T14:23:30.742740+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
   <entry>
     <id>http://rdaxini.github.io/.com/posts/gsoc_project_intro/</id>
-    <title>Enhancing solar energy modelling: implementing new spectral corrections in pvlib python</title>
+    <title>Spectral corrections in pvlib python: A GSoC project</title>
     <updated>2024-05-27T00:00:00+00:00</updated>
     <author>
       <name>Rajiv Daxini</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This first blog post introduces the motivation and plan for my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract &lt;a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT"&gt;can be found here&lt;/a&gt; and is reinstated below.&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This first blog post introduces the motivation and plan for my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; (GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections in pvlib python.” The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract &lt;a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT"&gt;can be found here&lt;/a&gt; and is reinstated below.&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="http://rdaxini.github.io/.com/posts/gsoc_project_intro/"/>
-    <summary>This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract can be found here and is reinstated below.</summary>
+    <summary>This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC) (GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections in pvlib python.” The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract can be found here and is reinstated below.</summary>
     <category term="gsoc" label="gsoc"/>
     <category term="introduction" label="introduction"/>
     <category term="openscience" label="open science"/>

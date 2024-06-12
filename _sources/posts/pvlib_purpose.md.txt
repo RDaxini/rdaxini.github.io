@@ -3,7 +3,7 @@
 :author: Rajiv Daxini
 :tags: pvlib, solar, open science, gsoc
 ```
-I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of "toolbox" in the official introduction to pvlib:
+I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of "toolbox" in the [official introduction](https://pvlib-python.readthedocs.io/en/stable/index.html) to pvlib:
 
 >pvlib python is a community developed toolbox that provides a set of functions and classes for simulating the performance of photovoltaic energy systems and accomplishing related tasks. 
 

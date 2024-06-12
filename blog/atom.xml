@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-06-12T14:51:21.478629+00:00</updated>
+  <updated>2024-06-12T14:58:43.051625+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Rajiv Daxini</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of “toolbox” in the official introduction to pvlib:&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of “toolbox” in the &lt;a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/index.html"&gt;official introduction&lt;/a&gt; to pvlib:&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="http://rdaxini.github.io/.com/posts/pvlib_purpose/"/>

@@ -8,19 +8,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="Spectral corrections in pvlib python: A GSoC project" />
+<meta property="og:title" content="pvlib: toolbox vs application" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="posts/gsoc_project_intro/" />
+<meta property="og:url" content="posts/pvlib_purpose/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:description" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections..." />
+<meta property="og:description" content="I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction fu..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_posts_gsoc_project_intro_2383951b.png" />
-<meta property="og:image:alt" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modellin..." />
-<meta name="description" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections..." />
+<meta property="og:image" content="/_images/social_previews/summary_posts_pvlib_purpose_502e8d97.png" />
+<meta property="og:image:alt" content="I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data s..." />
+<meta name="description" content="I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction fu..." />
 <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Spectral corrections in pvlib python: A GSoC project &#8212; Dax&#39;s Blog</title>
+    <title>pvlib: toolbox vs application &#8212; Dax&#39;s Blog</title>
   
   
   
@@ -55,7 +55,7 @@
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/gsoc_project_intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/pvlib_purpose';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
@@ -364,7 +364,7 @@
   
   <i class="fa fa-calendar"></i>
   
-  <span>27 May 2024</span>
+  <span>12 June 2024</span>
   
 </h2>
 <ul>
@@ -421,18 +421,6 @@
   
   
   
-  
-  
-  <a href="../../blog/tag/introduction/">introduction</a>
-  
-  
-  
-  
-  
-  <a href="../../blog/tag/spectral/">spectral</a>
-  
-  
-  
 </li>
 
 
@@ -449,8 +437,8 @@
   
   
   <li>
-    <a href="../pvlib_purpose/">
-      12 June - pvlib: toolbox vs application
+    <a href="../gsoc_project_intro/">
+      27 May - Spectral corrections in pvlib python: A GSoC project
     </a>
   </li>
   
@@ -491,7 +479,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Spectral...</li>
+    <li class="breadcrumb-item active" aria-current="page">pvlib:...</li>
   </ul>
 </nav>
 </div>
@@ -508,71 +496,58 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="spectral-corrections-in-pvlib-python-a-gsoc-project">
-<h1>Spectral corrections in pvlib python: A GSoC project<a class="headerlink" href="#spectral-corrections-in-pvlib-python-a-gsoc-project" title="Permalink to this heading">#</a></h1>
-<p>This first blog post introduces the motivation and plan for my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> (GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections in pvlib python.” The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT">can be found here</a> and is reinstated below.</p>
-<section id="project-abstract">
-<h2>Project abstract<a class="headerlink" href="#project-abstract" title="Permalink to this heading">#</a></h2>
-<p>Accounting for spectral effects in photovoltaic (PV) performance models is critical for accurate and reliable performance forecasts. Variation in the solar spectral distribution changes the useful fraction of irradiance incident on a PV device, and thus can increase or decrease its performance. The relationship between the performance of a PV module and the solar spectrum is captured by a “spectral correction function” (SCF), a plethora of which have been published in the literature over the last quarter of a century. However, only a fraction of these published models are available in pvlib. The aim of this project is to implement new SCFs in pvlib and develop examples to guide users in applying these models. The implementation of these new models will strengthen pvlib through enhancing its flexibility, accuracy, and reliability for different modelling scenarios. Furthermore, the additions to the example gallery will increase the accessibility and usability of these models and pvlib as a whole, in particular for new users.</p>
+<section id="pvlib-toolbox-vs-application">
+<h1>pvlib: toolbox vs application<a class="headerlink" href="#pvlib-toolbox-vs-application" title="Permalink to this heading">#</a></h1>
+<p>I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of “toolbox” in the official introduction to pvlib:</p>
+<blockquote>
+<div><p>pvlib python is a community developed toolbox that provides a set of functions and classes for simulating the performance of photovoltaic energy systems and accomplishing related tasks.</p>
+</div></blockquote>
+<p>In short, the question raised (not for the first time) was to what extent should pvlib guide and educate the user in the general field of PV performance modelling, compared with serving as a neutral tool for PV performance modelling as and however the user wishes.</p>
+<p>Imagine a user inputs <em>unusual</em>* data to a pvlib function, such as negative irradiance or exceptionally high double-digit air mass values, should the function raise an error and fail to proceed? Warn the user? Change the input? Just continue with what it has been given?</p>
+<p>I don’t intend to conclude the discussion on this subject, which has already been going on for longer than I have even been using pvlib, but just share a summary of some thoughts on the matter through this new blog channel.</p>
+<p>*I prefer <em>unusual</em> here as I want to encompass non-physical data as well as inputs that are mathematically correct in the purest sense but may be highly unlikely scenarios that some developers may wish to classify as effectively non-physical and invalidate the user’s operation</p>
+<section id="toolbox-vs-application-a-name-summary-a">
+<h2>Toolbox vs application<a name="summary"></a><a class="headerlink" href="#toolbox-vs-application-a-name-summary-a" title="Permalink to this heading">#</a></h2>
+<p>pvlib is officially a toolbox, no denying that. So, what is a toolbox and how does it differ from an application? Whereas an <strong>application</strong> is typically built on predetermined workflows, a <strong>toolbox</strong> contains the building blocks for the user to construct their own workflows. The models, functions, resources (tools…) within the pvlib toolbox can each be used separately for specific applications, or combined with any range of pvlib models as well as custom models from the user [1]. This flexibility is a paramount, particularly in research applications where developers seek to experiment with new modelling models and methods.</p>
+<p>Besides this fundamental difference in principles between the two, another difference is that a toolbox typically has a minimal user interface, if one at all. Meanwhile, an application may be run through a graphical user interface. In turn, this leads to a toolbox requiring a greater level of user proficiency since the user retains greater autonomy over the modelling process.</p>
+<p>In summary, compared with an application, a toolbox…</p>
+<ul class="simple">
+<li><p>Enables custom workflows</p></li>
+<li><p>Provides increased flexibility</p></li>
+<li><p>Assumes a higher level of user proficiency</p></li>
+</ul>
 </section>
-<section id="what-motivates-me">
-<h2>What motivates me?<a class="headerlink" href="#what-motivates-me" title="Permalink to this heading">#</a></h2>
-<p>As for my personal motivation, I am driven by a desire to contribute to pvlib and help improve the open-source resources available to scientists, engineers, and whoever else wants to know how a particular PV system is going to perform under any particular set of conditions. So, for one there is the goal to contribute, but on top of that is the fact that I need to and want to learn <em>how</em> to contribute. As a proponent of open science and open source, it’s a natural and necessary step for me to learn how to code collaboratively and the best way to learn is to do… so, here we are! As a newbie to open-source software development, I am also keen to share my learning experience with you, hence the existence of these blog posts. I hope not only to share technical updates on the project itself, but also reflect on the overall learning experience of open-source software development. I hope that in doing so I will be able to help and inspire others to engage and contribute to open-source projects, especially those with little or no prior experience of doing so.</p>
-<p>Besides my internal motivation, I have to say that I am also motivated by my mentors for this project – <a class="reference external" href="https://github.com/AdamRJensen">Adam Jensen</a> and <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a>. These guys’ are integral members of the pvlib community and their commitment to the ongoing growth and development of pvlib is inspiring. After introducing me to the GSoC program, they both supported my application and I am fortunate to have them as my guides for this work.</p>
-<p><img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
+<section id="implications">
+<h2>Implications<a class="headerlink" href="#implications" title="Permalink to this heading">#</a></h2>
+<p>Returning to our data screening scenario. In the case of an application, the user interface may only accept inputs of values that meet certain conditions in order to satisfy the requirements of the preset modelling conditions. Currently in pvlib, there is no standard way to approach this.</p>
+<p>Some functions contain data screens to warn users of <em>unusual</em> inputs, and even change their values to <code class="docutils literal notranslate"><span class="pre">nan</span></code> or some other pre-determined default. For example, the <a class="reference external" href="https://pvlib-python.readthedocs.io/en/v0.10.5/reference/generated/pvlib.spectrum.spectral_factor_firstsolar.html"><code class="docutils literal notranslate"><span class="pre">pvlib.spectrum.spectral_factor_firstsolar()</span></code></a> takes airmass and precipitable water as two of its inputs. The function allows the user to set a maximum value for precipitable water. Any data greater than this value will be replaced by <code class="docutils literal notranslate"><span class="pre">nan</span></code> and the user will be warned. If the user does not define a maximum, the maximum defaults to 8. The model also contains a restriction on airmass values, over which the user has no control. No matter the circumstances, air mass values greater than 10 will default to 10. On the other hand, a function such as <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.pvsystem.Array.get_irradiance.html"><code class="docutils literal notranslate"><span class="pre">pvlib.pvsystem.Array_get_irradiance()</span></code></a> would allow you to input airmass values of 100 if you so wish.</p>
+<p>pvlib may be characterised quite clearly as a toolbox, which has a fairly straightforward (albeit somewhat subjective) definition. In practice, as functions have been implemented over time, the content of the toolbox appears to cross boundaries between applications and tools. Is that a bad thing? No, not necessarily. Although the question of what pvlib is, at least on paper (computer screen), may be clear, the next question is what do we want from pvlib? It is certainly not for me to decide in a blog post. As an open-source platform, it is for everyone in the community to decide. As a member of that community though, I’d like to float a few ideas.</p>
 </section>
-<section id="why-care-about-spectral-irradiance">
-<h2>Why care about spectral irradiance?<a class="headerlink" href="#why-care-about-spectral-irradiance" title="Permalink to this heading">#</a></h2>
-<section id="not-all-light-is-created-equal">
-<h3>Not all light is created equal<a class="headerlink" href="#not-all-light-is-created-equal" title="Permalink to this heading">#</a></h3>
-<p>Aside from what motivates me to work on this project, what motivates the project itself? Sunny days =&gt; more solar power, right? What does the colour of light (spectral irradiance) have to do with anything? Well, not exactly. Not all light is created equal — sometimes you have more infrared, sometimes more ultraviolet. Much like your skin when you go out on a sunny day, sometimes you get warm and sometimes you get sun burnt, solar panels also respond differently to different types of light (different spectra) because they have what is known as a “spectral response”. Accounting for this effect when modelling PV performance is critical and failing to do so can lead to <a class="reference external" href="https://doi.org/10.1016/j.solener.2019.12.042">errors of up to 15%</a> for annualised performance predictions.</p>
+<section id="what-next">
+<h2>What next?<a class="headerlink" href="#what-next" title="Permalink to this heading">#</a></h2>
+<p>Overall, I feel a balance between the two is needed. Do I call for balance while wavering inbetween the two from a position of indecision? No, I firmly believe a balance is required. Referring back to the three key characteristics of a toolbox in <span class="xref myst">the summary here</span>, I think emphasing flexibility is key. Pvlib is a toolbox; that’s what makes it unique, that is its strength, and that is how it should be developed. Does that mean we should go through all existing pvlib functions with pitchforks to purge out every last data input screen that ever dare glance upon our data? No, certainly not. While I am hesitant to encourage <em>changing</em> any user’s input data in any scenario, and even more so in the absence of any user control, I do see some value in educating the user through the use of data screens for basic “sense checks”. Preventing a user from running certain modelling scenarios diminishes flexibility, but at the same time some sense checks accompanied by warnings could help enhance the usability of pvlib while retaining the flexibility of its application.</p>
+<p>Another way to think about this is that each user will have their own intended use for pvlib and as a toolbox it is the role of pvlib to serve the user however they wish. I do not think it even possible for any pvlib contributor to determine within reason, for example, what is a “high” or “low” input that should or should not be allowed. I can imagine a scenario in which a user may wish to see how or why a particular modelling scenario does not work under certain extreme conditions, or even see for themselves why certain conditions are in fact extreme, and needs to input <em>unusual</em> data. On the other hand, using the airmass example again, if a user enters a negative air mass value then although I would let them run their scenario it could be argued that the most likely reason for this is a typo and as such it may be useful to prompt the user with a brief warning.</p>
+<p>Now, how can one determine  determine what these “highly likely” errors are from the user that should raise warnings? I do not know. It’s not always going to be clear cut. That is one reason why I lean more towards maintaining the core principles of a toolbox within pvlib, and minimising interference with the user’s actions. However, does that mean we should not try? No. I do feel there is room for supporting users in applying pvlib and we should certainly try. This could take the form of data screens for basic sense checks, but without changing user inputs and preenting users from running their desired scenarios. It could also take the form of enhancing the documentation; not to veer away from focusing on documenting the specific function at hand of course, but perhaps at least throwing in a few additional references to external resources that can educate the user on the general modelling theory associated with the function at hand.</p>
 </section>
-<section id="pvlib-current-capabilities">
-<h3>pvlib: current capabilities<a class="headerlink" href="#pvlib-current-capabilities" title="Permalink to this heading">#</a></h3>
-<p>Pvlib currently contains three spectral correction functions (SCFs) to model PV performance variations due to changes in the spectrum. However, the scope of models is limited in terms of the diversity of dependent variables and the documentation lacks examples to guide users on the implementation of these functions in the overall modelling pipeline. In terms of the diversity of dependent variables, there are two primary limitations. First, none of the existing models explicitly consider the effects of cloud cover. Second, all models are based on proxy variables. Proxy variables are indirect characterisation indices of the solar spectrum, suchas air mass, precipitable water content, and so on. These are atmospheric factors that influence the spectrum and whose influence is considered sufficiently dominant such that their value may be used as an indicator for the prevailing spectral irradiance conditions. As a simple analogy, when it is hot outside, one would expect ice cream sales to increase. Therefore, temperature could be used as a proxy for ice cream sales. The advantage of these varaibles is of course that they can easily be calcualted using easily acquirable parameters such as time of day, location, ambient air temperature, humidity, and so on. The limitation is that they limit the amount of information on the spectrum contained with the correction function. More information on different models and characterisation indices can be found <a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129461">in this review paper</a>.</p>
-</section>
-<section id="pvlib-what-s-next">
-<h3>pvlib: what’s next?<a class="headerlink" href="#pvlib-what-s-next" title="Permalink to this heading">#</a></h3>
-<p>Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/1950">An issue</a> has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Model</strong></p></th>
-<th class="head"><p><strong>Reference</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Air mass</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.1997.654283">King et al. 2002</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Air mass, aerosol optical depth, precipitable water</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/JPHOTOV.2017.2787019">Caballero et al. 2018</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Air mass, precipitable water</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.2016.7749836">Lee and Panchula 2016</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>–Proposed models below–</p></td>
-<td><p>–Proposed models below–</p></td>
-</tr>
-<tr class="row-even"><td><p>Air mass, clearness index</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC45281.2020.9300932">Pelland et al. 2020 </a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Air mass, clearness index</p></td>
-<td><p><a class="reference external" href="http://dx.doi.org/10.4229/24thEUPVSEC2009-4AV.3.27">Huld et al. 2009</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Average photon energy + spectral band depth</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129046">Daxini et al. 2023</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The implementation of these models in pvlib will be supported by a new example demonstrating their application and use in the overall PV performance modelling pipeline. This will be the first example in pvlib python for a spectral correction function.</p>
-</section>
-</section>
-<section id="closing-remark">
-<h2>Closing remark<a class="headerlink" href="#closing-remark" title="Permalink to this heading">#</a></h2>
-<p>Stay tuned into this blog for more updates. You can also follow <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2065">this github issue</a> and <a class="reference external" href="https://www.linkedin.com/in/rajiv-daxini-ba354a237/">my LinkedIn page</a> for updates on the project. Please feel free to share your comments and thoughts on the open issues and public posts so that we may develop this project together. All and any feedback is always more than welcome!</p>
+<section id="closing-remarks">
+<h2>Closing remarks<a class="headerlink" href="#closing-remarks" title="Permalink to this heading">#</a></h2>
+<p>Pvlib is a toolbox containing tools. Paraphrasing the wise words of one pvlib maintainer:</p>
+<blockquote>
+<div><p>A hammer is a tool from a toolbox. It is used to knock in nails. If you try using it to knock in a screw, does it throw an error at you? No. Neither should pvlib.</p>
+</div></blockquote>
+<p>Personally, I almost wholly on board with team hammer.</p>
+<p>Would I be annoyed if my hammer tried to switch out my screw for a nail? Yes.</p>
+<p>Would I be bothered if my hammer warned me that hitting screws is not the function for which it is designed? No, as long as it still allowed me to hit my screw.
+If I’d never used a hammer before, I’d probably even appreciate the warning.</p>
+<p><em>But</em> let’s say I bought my hammer to knock in tent stakes and the developer didn’t consider that application… well, then I might get a little, just a little, irritated by the warning every time I tried to pitch my tent.</p>
+<p>Okay, we (I) might getting carried away with the hammers now but I think my point is clear and I hope this post gets us thinking about what we want from pvlib.</p>
+<hr class="docutils" />
 <p>-Dax</p>
-<p>27 May 2024</p>
+<p>12 June 2024</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<p>[1] <a class="reference external" href="https://joss.theoj.org/papers/10.21105/joss.05994">Anderson, Kevin S., et al. “pvlib python: 2023 project update.” <em>Journal of Open Source Software 8</em>(92) (2023): 5994.</a></p>
 </section>
 </section>
 
@@ -584,17 +559,17 @@
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
     
+    
+    <a href="../gsoc_project_intro/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Spectral corrections in pvlib python: A GSoC project</span>
+    </a>
+    
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="../pvlib_purpose/">
-      <span>pvlib: toolbox vs application</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>
@@ -630,22 +605,18 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-abstract">Project abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-motivates-me">What motivates me?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-care-about-spectral-irradiance">Why care about spectral irradiance?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-all-light-is-created-equal">Not all light is created equal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-current-capabilities">pvlib: current capabilities</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-what-s-next">pvlib: what’s next?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-remark">Closing remark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbox-vs-application-a-name-summary-a">Toolbox vs application<a name="summary"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-next">What next?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-remarks">Closing remarks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/posts/gsoc_project_intro.md.txt">
+    <a href="../../_sources/posts/pvlib_purpose.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

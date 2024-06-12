@@ -2,10 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-05-27T14:23:30.742740+00:00</updated>
+  <updated>2024-06-12T14:51:21.478629+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>http://rdaxini.github.io/.com/posts/pvlib_purpose/</id>
+    <title>pvlib: toolbox vs application</title>
+    <updated>2024-06-12T00:00:00+00:00</updated>
+    <author>
+      <name>Rajiv Daxini</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of “toolbox” in the official introduction to pvlib:&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="http://rdaxini.github.io/.com/posts/pvlib_purpose/"/>
+    <summary>I wanted to write a short post sharing an interesting discussion that arose in the last pvlib GSoC meeting. What started as a conversation about input data screening in a new spectral correction function turned into a discussion on the role of pvlib for the user. It helped me understand the meaning of “toolbox” in the official introduction to pvlib:</summary>
+    <category term="gsoc" label="gsoc"/>
+    <category term="openscience" label="open science"/>
+    <category term="pvlib" label="pvlib"/>
+    <category term="solar" label="solar"/>
+    <published>2024-06-12T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://rdaxini.github.io/.com/posts/gsoc_project_intro/</id>
     <title>Spectral corrections in pvlib python: A GSoC project</title>

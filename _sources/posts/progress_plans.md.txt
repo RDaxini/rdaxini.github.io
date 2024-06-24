@@ -14,7 +14,7 @@ A new version of pvlib-python was released on 23 June 2024, featuring multiple u
 
 More details on this release and previous versions can be [found here](https://pvlib-python.readthedocs.io/en/stable/whatsnew.html).
 
-This month's release features two contributions from myself through my GSoC project, which are my first ever contributions to pvlib python. I am grateful to my mentors, Adam Jensen and Kevin Anderson, for supporting me through my first contribution, as well as Cliff Hansem and fellow GSoC students Echedey and Ioannis for helping with reviews. At the time of this month's release and the conclusion of my first pvlib contribution, I'd like to summarise the progress of my GSoC project so far and highlight the ongoing work as well as next stages for the project.
+This month's release features two contributions from myself through my GSoC project, which are my first ever contributions to pvlib python. I am grateful to my mentors, Adam Jensen and Kevin Anderson, for supporting me through my first contribution, as well as Cliff Hansen and fellow GSoC students Echedey and Ioannis for helping with reviews. At the time of this month's release and the conclusion of my first pvlib contribution, I'd like to summarise the progress of my GSoC project so far and highlight the ongoing work as well as next stages for the project.
 
 ## Progress to date
 There are two categories to the progress so far: new knowledge and hard output.

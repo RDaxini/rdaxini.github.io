@@ -2,10 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-06-12T14:58:43.051625+00:00</updated>
+  <updated>2024-06-24T19:41:05.772068+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>http://rdaxini.github.io/.com/posts/progress_plans/</id>
+    <title>pvlib v0.11.0 release and GSoC update</title>
+    <updated>2024-06-24T00:00:00+00:00</updated>
+    <author>
+      <name>Rajiv Daxini</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;A new version of pvlib-python was released on 23 June 2024, featuring multiple updates including:&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="http://rdaxini.github.io/.com/posts/progress_plans/"/>
+    <summary>A new version of pvlib-python was released on 23 June 2024, featuring multiple updates including:</summary>
+    <category term="gsoc" label="gsoc"/>
+    <category term="openscience" label="open science"/>
+    <category term="pvlib" label="pvlib"/>
+    <category term="solar" label="solar"/>
+    <category term="v0.11.0" label="v0.11.0"/>
+    <published>2024-06-24T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://rdaxini.github.io/.com/posts/pvlib_purpose/</id>
     <title>pvlib: toolbox vs application</title>

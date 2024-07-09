@@ -2,10 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-07-09T13:00:27.187863+00:00</updated>
+  <updated>2024-07-09T15:31:48.925859+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>http://rdaxini.github.io/.com/posts/new_example/</id>
+    <title>How to account for the spectral effect on PV devices using pvlib-python?</title>
+    <updated>2024-07-09T00:00:00+00:00</updated>
+    <author>
+      <name>Rajiv Daxini</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performance as a result of spectral variation. An update on the GSoC project so far is also presented.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="http://rdaxini.github.io/.com/posts/new_example/"/>
+    <summary>This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performance as a result of spectral variation. An update on the GSoC project so far is also presented.</summary>
+    <category term="example" label="example"/>
+    <category term="gsoc" label="gsoc"/>
+    <category term="mismatch" label="mismatch"/>
+    <category term="pvlib" label="pvlib"/>
+    <category term="solar" label="solar"/>
+    <category term="spectral" label="spectral"/>
+    <published>2024-07-09T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://rdaxini.github.io/.com/posts/progress_plans/</id>
     <title>pvlib v0.11.0 release and GSoC update</title>

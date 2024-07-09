@@ -23,4 +23,5 @@ It is hoped that improvements to the documentation of pvlib-python, in particula
 
 ### References
 [1] Kinsey, G., et al. "Impact of measured spectrum variation on solar photovoltaic efficiencies worldwide." Renewable Energy 196 (2022): 995-1016.
+
 [2] Daxini, R., and Wu, Y. "Review of methods to account for the solar spectral influence on photovoltaic device performance." Energy (2023): 129461.

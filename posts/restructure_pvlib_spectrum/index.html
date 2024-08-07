@@ -8,19 +8,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="How to account for the spectral effect on PV devices using pvlib-python?" />
+<meta property="og:title" content="Restructuring and renaming: pvlib/spectrum" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="posts/new_example/" />
+<meta property="og:url" content="posts/restructure_pvlib_spectrum/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:description" content="This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performance as a result of spectral variation. An ..." />
+<meta property="og:description" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and associated tests. The issue: Fol..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_posts_new_example_a350a51f.png" />
-<meta property="og:image:alt" content="This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performanc..." />
-<meta name="description" content="This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performance as a result of spectral variation. An ..." />
+<meta property="og:image" content="/_images/social_previews/summary_posts_restructure_pvlib_spectrum_42152fdd.png" />
+<meta property="og:image:alt" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum packa..." />
+<meta name="description" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and associated tests. The issue: Fol..." />
 <meta name="twitter:card" content="summary_large_image" />
 
-    <title>How to account for the spectral effect on PV devices using pvlib-python? &#8212; Dax&#39;s Blog</title>
+    <title>Restructuring and renaming: pvlib/spectrum &#8212; Dax&#39;s Blog</title>
   
   
   
@@ -55,7 +55,7 @@
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/new_example';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/restructure_pvlib_spectrum';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
@@ -366,7 +366,7 @@
   
   <i class="fa fa-calendar"></i>
   
-  <span>09 July 2024</span>
+  <span>07 August 2024</span>
   
 </h2>
 <ul>
@@ -413,13 +413,13 @@
   
   
   
-  <a href="../../blog/tag/example/">example</a>
+  <a href="../../blog/tag/spectrum/">spectrum</a>
   
   
   
   
   
-  <a href="../../blog/tag/mismatch/">mismatch</a>
+  <a href="../../blog/tag/testing/">testing</a>
   
   
   
@@ -451,8 +451,8 @@
   
   
   <li>
-    <a href="../restructure_pvlib_spectrum/">
-      07 August - Restructuring and renaming: pvlib/spectrum
+    <a href="../new_example/">
+      09 July - How to account for the spectral effect on PV devices using pvlib-python?
     </a>
   </li>
   
@@ -511,7 +511,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">How to...</li>
+    <li class="breadcrumb-item active" aria-current="page">Restructurin...</li>
   </ul>
 </nav>
 </div>
@@ -528,28 +528,35 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="how-to-account-for-the-spectral-effect-on-pv-devices-using-pvlib-python">
-<h1>How to account for the spectral effect on PV devices using pvlib-python?<a class="headerlink" href="#how-to-account-for-the-spectral-effect-on-pv-devices-using-pvlib-python" title="Permalink to this heading">#</a></h1>
-<p>This post introduces a new addition to the pvlib-python example gallery that demonstrates the application of pvlib-python to model the shift in PV performance as a result of spectral variation. An update on the GSoC project so far is also presented.</p>
-<section id="importance-of-the-solar-spectrum-for-pv-performance-modelling">
-<h2>Importance of the solar spectrum for PV performance modelling<a class="headerlink" href="#importance-of-the-solar-spectrum-for-pv-performance-modelling" title="Permalink to this heading">#</a></h2>
-<p>While the effects of variables such as broadband irradiance, temperature, angle of incidence, and so on are bread and butter fundamentals for PV performance modelling, the spectral distribution of the available irradiance is a more subtle yet still important factor to consider. Even for crystalline silicon PV, which is the most stable PV type under variable spectral irradiance conditions, can exhibit weekly changes in performance of up to 14% with respect to standard test condition (STC) performance [1].</p>
-<p>The spectral mismatch factor, <em>M</em>, characterises the shift in PV performance from STC performance as a result of deviation in the solar spectrum from the STC spectrum (AM1.5). <em>M</em> less (greater) than unity implies lower (higher) performance under the prevailing spectrum compared to performance under the reference spectrum. An _M_value equal to 1 implies no change in performance compared with performance under the reference spectrum.</p>
-<p>pvlib-python contains several methods to estimate the spectral mismatch factor based on either PV spectral response and spectral irradiance data, or proxy characterisation indices of the spectrum such as air mass, precipitable water, and clearsky index. If <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2065">the stetch goal</a> of my GSoC project is achieved, a new estimation method using only spectral irradiance data (no spectral response curves) will also be implemented. A full review of different spectral and PV performance shift characterisation indices, as well as methods to estimate <em>M</em> using these indices, is presented in [2].</p>
+<section id="restructuring-and-renaming-pvlib-spectrum">
+<h1>Restructuring and renaming: pvlib/spectrum<a class="headerlink" href="#restructuring-and-renaming-pvlib-spectrum" title="Permalink to this heading">#</a></h1>
+<p>This post discusses and summarises some recent work to restructure the [<code class="docutils literal notranslate"><span class="pre">pvlib/spectrum</span></code>](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and <a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum">associated tests</a>.</p>
+<section id="the-issue">
+<h2>The issue<a class="headerlink" href="#the-issue" title="Permalink to this heading">#</a></h2>
+<p>Following the implementation of multiple new functions in what was originally a single <code class="docutils literal notranslate"><span class="pre">mismatch.py</span></code> file through not only my GSoC project but that of a fellow GSoC’er too, the size and scope of the contents was being stretched far beyond spectral mismatch. It felt like the right time to break the file down into more easily maintainable chunks that followed a clearer categorisation according to function contents. Splitting <code class="docutils literal notranslate"><span class="pre">mismatch.py</span></code> would not be a user-facing change, since the functions would still be called from <code class="docutils literal notranslate"><span class="pre">pvlib.spectrum</span></code>, but would impact future maintenance of the <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> package.</p>
 </section>
-<section id="updates-in-pvlib-python">
-<h2>Updates in pvlib-python<a class="headerlink" href="#updates-in-pvlib-python" title="Permalink to this heading">#</a></h2>
-<p>I have built a new example demonstrating the application of several methods to estimate <em>M</em> found in pvlib-python. The example can be found in the example gallery of the latest (development) version of pvlib-python <a class="reference external" href="https://pvlib-python.readthedocs.io/en/latest/gallery/spectrum/spectral_factor.html#sphx-glr-gallery-spectrum-spectral-factor-py">here</a>, which has not yet been released. This link will be updated to the stable version of the docs once available.</p>
-<p>The example takes you through how to import some TMY3 data, select a time period for analysis, calculate the required input variables for three spectral mismatch factor functions, estimate <em>M</em> over the desired timeframe, and plot the results.</p>
+<section id="the-solution">
+<h2>The solution<a class="headerlink" href="#the-solution" title="Permalink to this heading">#</a></h2>
+<p>Proposing to break up a file is one thing, deciding how is another. The first question is naming and categorisation. The original proposal from myself in <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2125">GH issue #2125</a> was to define three categories in three files as follows:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pvlib/spectrum/mismatch.py</span></code>
+–&gt; covers the effect on PV performance; calculations of spectral mismatch (atmospheric, field, indoor)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pvlib/spectrum/spectral_irr.py</span></code>
+–&gt; covers the outdoor meteorological side of things; all spectral irradiance calcs, e.g. <code class="docutils literal notranslate"><span class="pre">get_reference_spectra</span></code>, possibly move <code class="docutils literal notranslate"><span class="pre">spectrl2</span></code> into here as well</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pvlib/spectrum/spectral_resp.py</span></code>
+–&gt; covers the PV characteristics side of things, e.g. sr_to_qe / qe_to_sr calculations, <code class="docutils literal notranslate"><span class="pre">get_example_spectral_response</span></code></p></li>
+</ol>
+<p>While the suggestion of categories stuck, an interesting discussion ensued over the naming. First, using full names “irradiance” and “response” was suggested. The question of whether to include the <code class="docutils literal notranslate"><span class="pre">spectral_</span></code> prefix then arose. On the one hand, the prefix could be argued as redundant since the files are already location in a folder entitled “spectrum”. On the other hand, having an <code class="docutils literal notranslate"><span class="pre">irradiance.py</span></code> file with no prefix could cause issues in a specific scenario where a user tries the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pvlib</span> <span class="kn">import</span> <span class="n">irradiance</span>
+<span class="kn">from</span> <span class="nn">pvlib.spectrum</span> <span class="kn">import</span> <span class="n">irradiance</span>
+</pre></div>
+</div>
+<p>since the name “irradiance” alone is being used by the <code class="docutils literal notranslate"><span class="pre">pvlib/irradiance</span></code> package. Ultimately, it was decided that the prefix should be banished to a land far far away where it may wallow in its redundancy.</p>
+<p>For the PRs associated with this task, see <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/2136">#2136</a> (restructuring <code class="docutils literal notranslate"><span class="pre">pvlib/spectrum</span></code> functions) and <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/2151">#2151</a> (restructuring the associated tests from <code class="docutils literal notranslate"><span class="pre">test_spectrum.py</span></code>).</p>
 </section>
-<section id="future-work-and-closing-remarks">
-<h2>Future work and closing remarks<a class="headerlink" href="#future-work-and-closing-remarks" title="Permalink to this heading">#</a></h2>
-<p>It is hoped that improvements to the documentation of pvlib-python, in particular for modelling the spectral effect on PV performance, will make it easier for users to account for these effects on their PV systems using pvlib-python. The addition of this example to the example gallery marks the completion of the main GSoC project goals. Future work in this area will include working on the GSoC stretch goal, which is to implement a new function in pvlib-python to estimate the spectral mismatch factor using spectral irradiance data. In addition, enhancements to the user guide documentation for the spectrum unit of pvlib-python are being planned.</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<p>[1] Kinsey, G., et al. “Impact of measured spectrum variation on solar photovoltaic efficiencies worldwide.” Renewable Energy 196 (2022): 995-1016.</p>
-<p>[2] Daxini, R., and Wu, Y. “Review of methods to account for the solar spectral influence on photovoltaic device performance.” Energy (2023): 129461.</p>
+<section id="concluding-remarks">
+<h2>Concluding remarks<a class="headerlink" href="#concluding-remarks" title="Permalink to this heading">#</a></h2>
+<p>Working on the structure of folders in pvlib has been an interesting experience and involved different discussions and coding skills compared with my previous tasks, which have primarily been to implement new spectral mismatch estimation models. One of these new discussions for me has been naming in pvlib, which is an ongoing process and challenge. I have also raised <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2150">an issue</a> about how we refer to spectral irradiance in pvlib, and I have noticed that we refer to the spectral mismatch as both “mismatch” and “spectral factor”, which may need standardising at some point. Having consistent and understandable naming for both maintainers and users, as well as a clear structure and organisation maintenance and development easier.</p>
 </section>
 </section>
 
@@ -562,24 +569,16 @@
   <span class="ablog__prev">
     
     
-    <a href="../progress_plans/">
+    <a href="../new_example/">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>pvlib v0.11.0 release and GSoC update</span>
+      <span>How to account for the spectral effect on PV devices using pvlib-python?</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="../restructure_pvlib_spectrum/">
-      <span>Restructuring and renaming: pvlib/spectrum</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>
@@ -615,17 +614,16 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-solar-spectrum-for-pv-performance-modelling">Importance of the solar spectrum for PV performance modelling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updates-in-pvlib-python">Updates in pvlib-python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work-and-closing-remarks">Future work and closing remarks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-issue">The issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solution">The solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-remarks">Concluding remarks</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/posts/new_example.md.txt">
+    <a href="../../_sources/posts/restructure_pvlib_spectrum.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

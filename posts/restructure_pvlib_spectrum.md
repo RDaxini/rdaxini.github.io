@@ -3,7 +3,7 @@
 :author: Rajiv Daxini
 :tags: pvlib, solar, spectrum, testing, gsoc, spectral
 ```
-This post discusses and summarises some recent work to restructure the [`pvlib/spectrum`](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and [associated tests](https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum).
+This post discusses and summarises some recent work to restructure the [`pvlib/spectrum`](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum) package and [associated tests](https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum).
 
 ### The issue
 

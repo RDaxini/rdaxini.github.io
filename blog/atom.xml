@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-08-07T14:56:51.820744+00:00</updated>
+  <updated>2024-08-07T14:58:05.482186+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -13,11 +13,11 @@
     <author>
       <name>Rajiv Daxini</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This post discusses and summarises some recent work to restructure the [&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pvlib/spectrum&lt;/span&gt;&lt;/code&gt;](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and &lt;a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum"&gt;associated tests&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This post discusses and summarises some recent work to restructure the &lt;a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pvlib/spectrum&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; package and &lt;a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum"&gt;associated tests&lt;/a&gt;.&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="http://rdaxini.github.io/.com/posts/restructure_pvlib_spectrum/"/>
-    <summary>This post discusses and summarises some recent work to restructure the [pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and associated tests.</summary>
+    <summary>This post discusses and summarises some recent work to restructure the pvlib/spectrum package and associated tests.</summary>
     <category term="gsoc" label="gsoc"/>
     <category term="pvlib" label="pvlib"/>
     <category term="solar" label="solar"/>

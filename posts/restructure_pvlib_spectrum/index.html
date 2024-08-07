@@ -12,12 +12,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="posts/restructure_pvlib_spectrum/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:description" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and associated tests. The issue: Fol..." />
+<meta property="og:description" content="This post discusses and summarises some recent work to restructure the pvlib/spectrum package and associated tests. The issue: Following the implementation of multiple new functions in what was ori..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_posts_restructure_pvlib_spectrum_42152fdd.png" />
-<meta property="og:image:alt" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum packa..." />
-<meta name="description" content="This post discusses and summarises some recent work to restructure the [ pvlib/spectrum](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and associated tests. The issue: Fol..." />
+<meta property="og:image" content="/_images/social_previews/summary_posts_restructure_pvlib_spectrum_14c3ee67.png" />
+<meta property="og:image:alt" content="This post discusses and summarises some recent work to restructure the pvlib/spectrum package and associated tests. The issue: Following the implementation o..." />
+<meta name="description" content="This post discusses and summarises some recent work to restructure the pvlib/spectrum package and associated tests. The issue: Following the implementation of multiple new functions in what was ori..." />
 <meta name="twitter:card" content="summary_large_image" />
 
     <title>Restructuring and renaming: pvlib/spectrum &#8212; Dax&#39;s Blog</title>
@@ -530,7 +530,7 @@
                   
 <section id="restructuring-and-renaming-pvlib-spectrum">
 <h1>Restructuring and renaming: pvlib/spectrum<a class="headerlink" href="#restructuring-and-renaming-pvlib-spectrum" title="Permalink to this heading">#</a></h1>
-<p>This post discusses and summarises some recent work to restructure the [<code class="docutils literal notranslate"><span class="pre">pvlib/spectrum</span></code>](https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum package) and <a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum">associated tests</a>.</p>
+<p>This post discusses and summarises some recent work to restructure the <a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/spectrum"><code class="docutils literal notranslate"><span class="pre">pvlib/spectrum</span></code></a> package and <a class="reference external" href="https://github.com/pvlib/pvlib-python/tree/main/pvlib/tests/spectrum">associated tests</a>.</p>
 <section id="the-issue">
 <h2>The issue<a class="headerlink" href="#the-issue" title="Permalink to this heading">#</a></h2>
 <p>Following the implementation of multiple new functions in what was originally a single <code class="docutils literal notranslate"><span class="pre">mismatch.py</span></code> file through not only my GSoC project but that of a fellow GSoC’er too, the size and scope of the contents was being stretched far beyond spectral mismatch. It felt like the right time to break the file down into more easily maintainable chunks that followed a clearer categorisation according to function contents. Splitting <code class="docutils literal notranslate"><span class="pre">mismatch.py</span></code> would not be a user-facing change, since the functions would still be called from <code class="docutils literal notranslate"><span class="pre">pvlib.spectrum</span></code>, but would impact future maintenance of the <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> package.</p>

@@ -2,10 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://rdaxini.github.io/.com/</id>
   <title>Blog</title>
-  <updated>2024-08-07T14:58:05.482186+00:00</updated>
+  <updated>2024-08-09T15:35:57.535732+00:00</updated>
   <link href="http://rdaxini.github.io/.com/"/>
   <link href="http://rdaxini.github.io/.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>http://rdaxini.github.io/.com/posts/pvlib_pvpmc/</id>
+    <title>pvlib at PVPMC: user meeting, tutorials, and new contributor workshop</title>
+    <updated>2024-08-07T00:00:00+00:00</updated>
+    <author>
+      <name>Rajiv Daxini</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This post summarises the event and invites you to get involved.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="http://rdaxini.github.io/.com/posts/pvlib_pvpmc/"/>
+    <summary>At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This post summarises the event and invites you to get involved.</summary>
+    <category term="copenhagen" label="copenhagen"/>
+    <category term="pvlib" label="pvlib"/>
+    <category term="pvpmc" label="pvpmc"/>
+    <category term="solar" label="solar"/>
+    <category term="workshop" label="workshop"/>
+    <published>2024-08-07T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://rdaxini.github.io/.com/posts/restructure_pvlib_spectrum/</id>
     <title>Restructuring and renaming: pvlib/spectrum</title>

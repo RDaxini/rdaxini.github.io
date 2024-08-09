@@ -8,19 +8,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="Spectral corrections in pvlib python: A GSoC project" />
+<meta property="og:title" content="pvlib at PVPMC: user meeting, tutorials, and new contributor workshop" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="posts/gsoc_project_intro/" />
+<meta property="og:url" content="posts/pvlib_pvpmc/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:description" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections..." />
+<meta property="og:description" content="At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This post summarises the event and invites you t..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_posts_gsoc_project_intro_2383951b.png" />
-<meta property="og:image:alt" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modellin..." />
-<meta name="description" content="This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC)(GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections..." />
+<meta property="og:image" content="/_images/social_previews/summary_posts_pvlib_pvpmc_ba9823c5.png" />
+<meta property="og:image:alt" content="At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This pos..." />
+<meta name="description" content="At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This post summarises the event and invites you t..." />
 <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Spectral corrections in pvlib python: A GSoC project &#8212; Dax&#39;s Blog</title>
+    <title>pvlib at PVPMC: user meeting, tutorials, and new contributor workshop &#8212; Dax&#39;s Blog</title>
   
   
   
@@ -55,7 +55,7 @@
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/gsoc_project_intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/pvlib_pvpmc';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
@@ -366,7 +366,7 @@
   
   <i class="fa fa-calendar"></i>
   
-  <span>27 May 2024</span>
+  <span>07 August 2024</span>
   
 </h2>
 <ul>
@@ -413,25 +413,19 @@
   
   
   
-  <a href="../../blog/tag/open-science/">open science</a>
+  <a href="../../blog/tag/pvpmc/">pvpmc</a>
   
   
   
   
   
-  <a href="../../blog/tag/gsoc/">gsoc</a>
+  <a href="../../blog/tag/workshop/">workshop</a>
   
   
   
   
   
-  <a href="../../blog/tag/introduction/">introduction</a>
-  
-  
-  
-  
-  
-  <a href="../../blog/tag/spectral/">spectral</a>
+  <a href="../../blog/tag/copenhagen/">copenhagen</a>
   
   
   
@@ -449,12 +443,6 @@
 </h3>
 <ul>
   
-  
-  <li>
-    <a href="../pvlib_pvpmc/">
-      07 August - pvlib at PVPMC: user meeting, tutorials, and new contributor workshop
-    </a>
-  </li>
   
   <li>
     <a href="../restructure_pvlib_spectrum/">
@@ -477,6 +465,12 @@
   <li>
     <a href="../pvlib_purpose/">
       12 June - pvlib: toolbox vs application
+    </a>
+  </li>
+  
+  <li>
+    <a href="../gsoc_project_intro/">
+      27 May - Spectral corrections in pvlib python: A GSoC project
     </a>
   </li>
   
@@ -517,7 +511,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Spectral...</li>
+    <li class="breadcrumb-item active" aria-current="page">pvlib at...</li>
   </ul>
 </nav>
 </div>
@@ -534,71 +528,35 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="spectral-corrections-in-pvlib-python-a-gsoc-project">
-<h1>Spectral corrections in pvlib python: A GSoC project<a class="headerlink" href="#spectral-corrections-in-pvlib-python-a-gsoc-project" title="Permalink to this heading">#</a></h1>
-<p>This first blog post introduces the motivation and plan for my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> (GSoC) project, which is entitled “Enhancing solar energy modelling: implementing new spectral corrections in pvlib python.” The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqT">can be found here</a> and is reinstated below.</p>
-<section id="project-abstract">
-<h2>Project abstract<a class="headerlink" href="#project-abstract" title="Permalink to this heading">#</a></h2>
-<p>Accounting for spectral effects in photovoltaic (PV) performance models is critical for accurate and reliable performance forecasts. Variation in the solar spectral distribution changes the useful fraction of irradiance incident on a PV device, and thus can increase or decrease its performance. The relationship between the performance of a PV module and the solar spectrum is captured by a “spectral correction function” (SCF), a plethora of which have been published in the literature over the last quarter of a century. However, only a fraction of these published models are available in pvlib. The aim of this project is to implement new SCFs in pvlib and develop examples to guide users in applying these models. The implementation of these new models will strengthen pvlib through enhancing its flexibility, accuracy, and reliability for different modelling scenarios. Furthermore, the additions to the example gallery will increase the accessibility and usability of these models and pvlib as a whole, in particular for new users.</p>
+<section id="pvlib-at-pvpmc-user-meeting-tutorials-and-new-contributor-workshop">
+<h1>pvlib at PVPMC: user meeting, tutorials, and new contributor workshop<a class="headerlink" href="#pvlib-at-pvpmc-user-meeting-tutorials-and-new-contributor-workshop" title="Permalink to this heading">#</a></h1>
+<p>At this year’s Europe PVPMC Workshop in Copenhagen 21-22 August 2024, the pvlib user group meeting will take place with a slightly different format. This post summarises the event and invites you to get involved.</p>
+<p>Note: There are only a few days remaining to register for the PVPMC Workshop, <a class="reference external" href="https://dtu.events/pvpmcworkshop2024">click here to register</a> by <strong>Monday 12 August</strong>. To find out more about past and future workshops, head over to the <a class="reference external" href="https://pvpmc.sandia.gov/workshops-and-pubs/workshops/">PVPMC page</a> on the Sandia National Laboratories website.</p>
+<section id="meeting-structure">
+<h2>Meeting structure<a class="headerlink" href="#meeting-structure" title="Permalink to this heading">#</a></h2>
+<p>Following the usual user group meeting to discuss pvlib updates and other news, the current plan is to break out into a few tables of different interests. A broad summary of the stations is as follows:</p>
+<ul class="simple">
+<li><p><strong>Completely new</strong> to pvlib — Learn what pvlib is about</p></li>
+<li><p><strong>Heard</strong> of pvlib, <strong>potentially used</strong> it before, would love to <strong>contribute</strong> — Learn how to use GitHub (Issues, PRs, Reviews…) and make your first contribution (yes, at the workshop!)</p></li>
+<li><p>pvlib <strong>tutorial</strong> for existing users — Work through a modelling scenario using pvlib</p></li>
+<li><p>Specific pvlib <strong>usage questions</strong> — Get help with specific problems or questions you have about pvlib functionality and PV modelling</p></li>
+<li><p><strong>General</strong> modelling discussion — What is says on the tin, general discussion about modelling topics</p></li>
+</ul>
 </section>
-<section id="what-motivates-me">
-<h2>What motivates me?<a class="headerlink" href="#what-motivates-me" title="Permalink to this heading">#</a></h2>
-<p>As for my personal motivation, I am driven by a desire to contribute to pvlib and help improve the open-source resources available to scientists, engineers, and whoever else wants to know how a particular PV system is going to perform under any particular set of conditions. So, for one there is the goal to contribute, but on top of that is the fact that I need to and want to learn <em>how</em> to contribute. As a proponent of open science and open source, it’s a natural and necessary step for me to learn how to code collaboratively and the best way to learn is to do… so, here we are! As a newbie to open-source software development, I am also keen to share my learning experience with you, hence the existence of these blog posts. I hope not only to share technical updates on the project itself, but also reflect on the overall learning experience of open-source software development. I hope that in doing so I will be able to help and inspire others to engage and contribute to open-source projects, especially those with little or no prior experience of doing so.</p>
-<p>Besides my internal motivation, I have to say that I am also motivated by my mentors for this project – <a class="reference external" href="https://github.com/AdamRJensen">Adam Jensen</a> and <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a>. These guys’ are integral members of the pvlib community and their commitment to the ongoing growth and development of pvlib is inspiring. After introducing me to the GSoC program, they both supported my application and I am fortunate to have them as my guides for this work.</p>
-<p><img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
+<section id="making-your-first-contribution-no-prior-github-knowledge-required">
+<h2>Making your first contribution (no prior GitHub knowledge required!)<a class="headerlink" href="#making-your-first-contribution-no-prior-github-knowledge-required" title="Permalink to this heading">#</a></h2>
+<p>I’ll be over at the coolest table helping you get “your code” into pvlib-python. I’ll be accompanied by fellow Google Summer of Code (GSoC) students. We will also be on hand to talk with you about opportunities such as GSoC to help you make contributions to pvlib through a structured program led by yourself under the mentorship of some of the pvlib wizards (aka maintainers).</p>
+<p>If you have used pvlib before and would like to contribute, but don’t know how, we’ll be there to guide you through the process. We will guide you from the set up process of installing Git, right through to opening your first “pull request” (it’s a way to share your code, but more on that at the meeting!)</p>
+<p>We have already prepared some beginners tasks you can complete for your first contribution. If you have some ideas of your own for pvlib, we’ll help you get started on creating an “issue” (a way to start a discussion online)</p>
+<p>I personally only started contributing to pvlib over the last few months through my GSoC project. Prior to that, I didn’t even have a GitHub account, let alone know what on earth a pull request is! Getting started was definitely the hardest part, but I can honestly say that once you’re set up with a bit of guidance it’s pretty smooth sailing (well, my sails still get tangled up sometimes but one of those pvlib wizards is always on hand to help!)</p>
 </section>
-<section id="why-care-about-spectral-irradiance">
-<h2>Why care about spectral irradiance?<a class="headerlink" href="#why-care-about-spectral-irradiance" title="Permalink to this heading">#</a></h2>
-<section id="not-all-light-is-created-equal">
-<h3>Not all light is created equal<a class="headerlink" href="#not-all-light-is-created-equal" title="Permalink to this heading">#</a></h3>
-<p>Aside from what motivates me to work on this project, what motivates the project itself? Sunny days =&gt; more solar power, right? What does the colour of light (spectral irradiance) have to do with anything? Well, not exactly. Not all light is created equal — sometimes you have more infrared, sometimes more ultraviolet. Much like your skin when you go out on a sunny day, sometimes you get warm and sometimes you get sun burnt, solar panels also respond differently to different types of light (different spectra) because they have what is known as a “spectral response”. Accounting for this effect when modelling PV performance is critical and failing to do so can lead to <a class="reference external" href="https://doi.org/10.1016/j.solener.2019.12.042">errors of up to 15%</a> for annualised performance predictions.</p>
-</section>
-<section id="pvlib-current-capabilities">
-<h3>pvlib: current capabilities<a class="headerlink" href="#pvlib-current-capabilities" title="Permalink to this heading">#</a></h3>
-<p>Pvlib currently contains three spectral correction functions (SCFs) to model PV performance variations due to changes in the spectrum. However, the scope of models is limited in terms of the diversity of dependent variables and the documentation lacks examples to guide users on the implementation of these functions in the overall modelling pipeline. In terms of the diversity of dependent variables, there are two primary limitations. First, none of the existing models explicitly consider the effects of cloud cover. Second, all models are based on proxy variables. Proxy variables are indirect characterisation indices of the solar spectrum, suchas air mass, precipitable water content, and so on. These are atmospheric factors that influence the spectrum and whose influence is considered sufficiently dominant such that their value may be used as an indicator for the prevailing spectral irradiance conditions. As a simple analogy, when it is hot outside, one would expect ice cream sales to increase. Therefore, temperature could be used as a proxy for ice cream sales. The advantage of these varaibles is of course that they can easily be calcualted using easily acquirable parameters such as time of day, location, ambient air temperature, humidity, and so on. The limitation is that they limit the amount of information on the spectrum contained with the correction function. More information on different models and characterisation indices can be found <a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129461">in this review paper</a>.</p>
-</section>
-<section id="pvlib-what-s-next">
-<h3>pvlib: what’s next?<a class="headerlink" href="#pvlib-what-s-next" title="Permalink to this heading">#</a></h3>
-<p>Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/1950">An issue</a> has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Model</strong></p></th>
-<th class="head"><p><strong>Reference</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Air mass</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.1997.654283">King et al. 2002</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Air mass, aerosol optical depth, precipitable water</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/JPHOTOV.2017.2787019">Caballero et al. 2018</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Air mass, precipitable water</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.2016.7749836">Lee and Panchula 2016</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>–Proposed models below–</p></td>
-<td><p>–Proposed models below–</p></td>
-</tr>
-<tr class="row-even"><td><p>Air mass, clearness index</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC45281.2020.9300932">Pelland et al. 2020 </a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Air mass, clearness index</p></td>
-<td><p><a class="reference external" href="http://dx.doi.org/10.4229/24thEUPVSEC2009-4AV.3.27">Huld et al. 2009</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Average photon energy + spectral band depth</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129046">Daxini et al. 2023</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The implementation of these models in pvlib will be supported by a new example demonstrating their application and use in the overall PV performance modelling pipeline. This will be the first example in pvlib python for a spectral correction function.</p>
-</section>
-</section>
-<section id="closing-remark">
-<h2>Closing remark<a class="headerlink" href="#closing-remark" title="Permalink to this heading">#</a></h2>
-<p>Stay tuned into this blog for more updates. You can also follow <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2065">this github issue</a> and <a class="reference external" href="https://www.linkedin.com/in/rajiv-daxini-ba354a237/">my LinkedIn page</a> for updates on the project. Please feel free to share your comments and thoughts on the open issues and public posts so that we may develop this project together. All and any feedback is always more than welcome!</p>
-<p>-Dax</p>
-<p>27 May 2024</p>
+<section id="concluding-remarks">
+<h2>Concluding remarks<a class="headerlink" href="#concluding-remarks" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Join the PVPMC workshop in Copenhagen</p></li>
+<li><p>pvlib rocks</p></li>
+<li><p>Want to learn more about pvlib and even make your first contribution? Join us at the user group meeting on Day 2 of the workshop.</p></li>
+</ul>
 </section>
 </section>
 
@@ -610,17 +568,17 @@
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
     
+    
+    <a href="../restructure_pvlib_spectrum/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Restructuring and renaming: pvlib/spectrum</span>
+    </a>
+    
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="../pvlib_purpose/">
-      <span>pvlib: toolbox vs application</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>
@@ -656,22 +614,16 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-abstract">Project abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-motivates-me">What motivates me?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-care-about-spectral-irradiance">Why care about spectral irradiance?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-all-light-is-created-equal">Not all light is created equal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-current-capabilities">pvlib: current capabilities</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-what-s-next">pvlib: what’s next?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-remark">Closing remark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meeting-structure">Meeting structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-your-first-contribution-no-prior-github-knowledge-required">Making your first contribution (no prior GitHub knowledge required!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-remarks">Concluding remarks</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/posts/gsoc_project_intro.md.txt">
+    <a href="../../_sources/posts/pvlib_pvpmc.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
